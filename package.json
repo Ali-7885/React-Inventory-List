@@ -1,0 +1,16 @@
+{
+    "name": "Inventory-List",
+    "version": "1.0.0",
+    "description": "This a React and Redux sample project  ",
+    "keywords": [
+      "react",
+      "redux"
+    ],
+    "author": "AJ at MAVAJ SUN CO (aj@mavajsunco.com )",
+    "license": "MIT",
+    "contributors": [],
+    "dependencies": {},
+    "devDependencies": {
+      "babel-cli": "^6.22.2"
+    }
+}
