@@ -1,16 +1,30 @@
 {
-    "name": "Inventory-List",
-    "version": "1.0.0",
-    "description": "This a React and Redux sample project  ",
-    "keywords": [
-      "react",
-      "redux"
-    ],
-    "author": "AJ at MAVAJ SUN CO (aj@mavajsunco.com )",
-    "license": "MIT",
-    "contributors": [],
-    "dependencies": {},
-    "devDependencies": {
-      "babel-cli": "^6.22.2"
-    }
+  "name": "Inventory-List",
+  "version": "1.0.0",
+  "description": "This a React and Redux sample project  ",
+  "keywords": [
+    "react",
+    "redux"
+  ],
+  "main": "bundel.js",
+  "scripts": {
+    "start": "./node_modules/.bin/webpack-dev-server"
+  },
+  "author": "AJ at MAVAJ SUN CO (aj@mavajsunco.com )",
+  "license": "MIT",
+  "contributors": [],
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
 }
