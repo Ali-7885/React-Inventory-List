@@ -29,17 +29,14 @@ import { render } from 'react-dom'
 import { IndexPage } from './modules/IndexPage'
 import { PageNotFound } from './modules/PageNotFound'
 import { Router, Route, hashHistory } from 'react-router'
-/*import Member from './modules/Member'
+import routes from './routes'
 
-import MemberList from './modules/MemberList'*/
+window.React = React
 
-window.React= React
-
-render( 
-
-	<Router history={hashHistory}>
-		<Route path='/' component={IndexPage}/>
-		<Route path='*' component={PageNotFound}/>
-	</Router>,
-	document.getElementById('react-container')
+render(
+   <Router history={hashHistory}>
+        <Route path='/' component={IndexPage}/>
+        <Route path='*' component={PageNotFound}/>
+    </Router>,
+    document.getElementById('react-container')
 )
