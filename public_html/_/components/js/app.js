@@ -27,6 +27,7 @@ console.log('The application has been start...');
 import React from 'react'
 import { render } from 'react-dom'
 import { IndexPage } from './modules/IndexPage'
+import { AddItemForm } from './modules/ui/AddItemForm'
 import { PageNotFound } from './modules/PageNotFound'
 import { Router, Route, hashHistory } from 'react-router'
 import routes from './routes'
@@ -36,6 +37,7 @@ window.React = React
 render(
    <Router history={hashHistory}>
         <Route path='/' component={IndexPage}/>
+        <Route path='/add' component={AddItemForm}/>
         <Route path='*' component={PageNotFound}/>
     </Router>,
     document.getElementById('react-container')
