@@ -28,6 +28,9 @@ import React from 'react'
 import { render } from 'react-dom'
 import { IndexPage } from './modules/IndexPage'
 import { AddItemForm } from './modules/ui/AddItemForm'
+import { SkiDayCount } from './modules/ui/AddItemForm'
+
+
 import { PageNotFound } from './modules/PageNotFound'
 import { Router, Route, hashHistory } from 'react-router'
 import routes from './routes'
@@ -38,6 +41,7 @@ render(
    <Router history={hashHistory}>
         <Route path='/' component={IndexPage}/>
         <Route path='/add' component={AddItemForm}/>
+         <Route path='/remove' component={SkiDayCount}/>
         <Route path='*' component={PageNotFound}/>
     </Router>,
     document.getElementById('react-container')

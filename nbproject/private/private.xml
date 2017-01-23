@@ -2,18 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Users/master/Work/Projects/Inventory-List/public_html/_/js/bundle.js</file>
-            <file>file:/Users/master/Work/Projects/Inventory-List/public_html/_/components/js/lib.js</file>
-            <file>file:/Users/master/Work/Projects/Inventory-List/.babelrc</file>
-            <file>file:/Users/master/Work/Projects/Inventory-List/public_html/_/components/js/modules/IndexPage.js</file>
-            <file>file:/Users/master/Work/Projects/Inventory-List/webpack.config.js</file>
-            <file>file:/Users/master/Work/Projects/Inventory-List/package.json</file>
-            <file>file:/Users/master/Work/Projects/Inventory-List/public_html/_/components/js/app.js</file>
-            <file>file:/Users/master/Work/Projects/Inventory-List/public_html/_/components/js/titles.json</file>
-            <file>file:/Users/master/Work/Projects/Inventory-List/public_html/_/components/sass/goodbye.scss</file>
-            <file>file:/Users/master/Work/Projects/Inventory-List/public_html/index.html</file>
-            <file>file:/Users/master/Work/Projects/Inventory-List/public_html/_/components/sass/hello.css</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
