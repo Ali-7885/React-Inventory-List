@@ -1,7 +1,7 @@
 /* 
  * The MIT License
- * 
- * Copyright 2017 MAVAJ SUN CO.
+ *
+ * Copyright 2017 master.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,24 +22,4 @@
  * THE SOFTWARE.
  */
 
-console.log('The application has been start...');
 
-import React from 'react'
-import { render } from 'react-dom'
-import { IndexPage } from './modules/IndexPage'
-import { PageNotFound } from './modules/PageNotFound'
-import { Router, Route, hashHistory } from 'react-router'
-/*import Member from './modules/Member'
-
-import MemberList from './modules/MemberList'*/
-
-window.React= React
-
-render( 
-
-	<Router history={hashHistory}>
-		<Route path='/' component={IndexPage}/>
-		<Route path='*' component={PageNotFound}/>
-	</Router>,
-	document.getElementById('react-container')
-)
