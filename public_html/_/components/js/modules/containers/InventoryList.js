@@ -1,26 +1,39 @@
 import InventoryList from '../ui/InventoryList'
 import { connect } from 'react-redux'
-import { removeItem } from '../../actions'
+import { addItem , removeItem } from '../../actions'
+import { PropTypes } from 'react'
 
 const mapStateToProps = (state, props) => 
   ({
-   items:  state.items
+   items:  state.items,
+   selectedItems: state.selectedItems
+   
   })
 
-
-const mapDispatchToProps = disptach => 
-  ({
-     onSelectItem(itemName) {
+const mapDispatchToProps = (disptach) => 
+  ({  
+    onSelectItem(itemName) {
         console.log('onSelectItem - - '+itemName)
-      //disptach(
-       // removeItem(itemName)
-     // )
+//        store.getState().selectedItems.has(itemName.trim())?
+        
     },
-    onAddItem(itemName) {
-        console.log('onAddItem')
+    
+    onAddItem( ) {
+        if (store.getState().selectedItems.length<1){
+
+        document.location.href = '/#/add'
+        }else{
+            disptach(
+                 addItem('something new')
+            )
+        }
     },
+    
     onRemoveItem(itemName) {
         console.log('onRemoveItem')
+        disptach(
+            removeItem('something new')
+        )
     }
  
   })  
