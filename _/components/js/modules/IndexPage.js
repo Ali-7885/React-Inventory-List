@@ -1,4 +1,4 @@
-import InventoryList from './ui/InventoryList'
+import InventoryList from './containers/InventoryList'
 
 export const IndexPage = ({children}) => 
     <div >
