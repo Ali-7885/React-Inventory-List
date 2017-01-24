@@ -11,7 +11,7 @@ const mapStateToProps = (state, props) =>
 const mapDispatchToProps = (disptach) => 
   ({  
     onAddItem(itemName) {    
-      
+            console.log(itemName);
             disptach(
                  addItem(itemName)
             )
