@@ -18,15 +18,6 @@ export function removeItem (itemName) {
 }
 
 
-export function removeItem (itemName) {
-
-    return {
-        type: C.REMOVE_ITEM,
-        payload: itemName
-    }
-}
-
-
 
 
 export function check(){

@@ -14,10 +14,11 @@ export const AddItemForm = ({ onAddItem=f=>f, router}) => {
 //         store.disptach(
 //                 addItem(onAddItem)
 //         )
-        onAddItem(onAddItem.itemName)
-        console.log(onAddItem.itemName)
-       router.push('/')
+        onAddItem(_itemName.value)
+        console.log(typeof(onAddItem))
+        console.log(_itemName.value)
         _itemName.value = ''
+        router.push('/')
     }
 
     return (
