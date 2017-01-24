@@ -22,7 +22,10 @@ const InventoryList =({items,onSelectItem=f=>f,onAddItem=f=>f,onRemoveItem=f=>f,
                         </tr>
                 </thead>
                 <tbody>
-                {items}
+                   {items.map(
+                    (data, i) => 
+                   <RowList key={i} {...data} onSelectItem={onSelectItem}/>)}
+
                 </tbody>
             </table>
         </div>
@@ -30,7 +33,7 @@ const InventoryList =({items,onSelectItem=f=>f,onAddItem=f=>f,onRemoveItem=f=>f,
 }
 
 InventoryList.propTypes = {
-    items: PropTypes.any.isRequired,
+    items: PropTypes.array.isRequired,
     onSelectItem: PropTypes.func,
     onAddItem: PropTypes.func, 
     onRemoveItem: PropTypes.func
