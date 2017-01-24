@@ -29,5 +29,11 @@ const InventoryList =({items,onSelectItem=f=>f,onAddItem=f=>f,onRemoveItem=f=>f,
     )
 }
 
+InventoryList.propTypes = {
+    items: PropTypes.any.isRequired,
+    onSelectItem: PropTypes.func,
+    onAddItem: PropTypes.func, 
+    onRemoveItem: PropTypes.func
+}
 
 export default InventoryList
