@@ -10,8 +10,8 @@ const InventoryList =({items,onSelectItem=f=>f,onAddItem=f=>f,onRemoveItem=f=>f,
     return (
         <div>   
             <div>    
-                <a onClick={()=>onAddItem }><AddBtn /></a>
-                <a onClick={()=>onRemoveItem}><RemoveBtn /></a>
+                <a onClick={onAddItem }><AddBtn /></a>
+                <a onClick={onRemoveItem}><RemoveBtn /></a>
             </div>
             <table>
                     <thead>

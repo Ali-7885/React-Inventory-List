@@ -11,7 +11,7 @@ const mapStateToProps = (state, props) =>
 const mapDispatchToProps = disptach => 
   ({
      onSelectItem(itemName) {
-        console.log('onSelectItem - - ')
+        console.log('onSelectItem - - '+itemName)
       //disptach(
        // removeItem(itemName)
      // )
