@@ -1,20 +1,19 @@
 import FaShield from 'react-icons/lib/fa/shield' 
-import { Component } from 'react'
+import { PropTypes } from 'react'
 
-class RowList extends Component {
+const RowList = ({ itemName, itemCount, onSelectItem=f=>f }) =>
+    <tr>
+        <td>{itemName}</td>
+        <td>{itemCount}</td>
+        <td><input type="checkbox" 
+            onClick={()=>onSelectItem(itemName)}/>
+        </td>
+    </tr>
 
-    render() {
-
-	    const { itemName, itemCount } = this.props
-        
-        return (
-            <tr>
-                <td>{itemName}</td>
-                <td>{itemCount}</td>
-                <td><input type="checkbox" onClick={()=>console.log(itemName)}/></td>
-            </tr>
-        )
-    }
+RowList.propTypes = {
+    itemName: PropTypes.string.isRequired,
+    itemCount: PropTypes.number.isRequired,
+    onSelectItem: PropTypes.func
 }
 
 export default RowList
