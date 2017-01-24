@@ -3,14 +3,14 @@ import RowList from './RowList'
 import AddBtn from 'react-icons/lib/fa/plus-circle'
 import RemoveBtn from 'react-icons/lib/fa/minus-circle'
 
-const InventoryList =({items,onSelectItem=f=>f,onAddItem=f=>f,onRemoveItem=f=>f,})=>{
+const InventoryList =({items,onSelectItem=f=>f,onAddItem=f=>f,onRemoveItem=f=>f})=>{
 
       console.log(items);
 
     return (
         <div>   
             <div>    
-                <a onClick={onAddItem }><AddBtn /></a>
+                <a onClick={onAddItem}><AddBtn /></a>
                 <a onClick={onRemoveItem}><RemoveBtn /></a>
             </div>
             <table>
@@ -33,7 +33,8 @@ const InventoryList =({items,onSelectItem=f=>f,onAddItem=f=>f,onRemoveItem=f=>f,
 }
 
 InventoryList.propTypes = {
-    items: PropTypes.array.isRequired,
+    items: PropTypes.object.isRequired,
+    selectedItems:PropTypes.array,
     onSelectItem: PropTypes.func,
     onAddItem: PropTypes.func, 
     onRemoveItem: PropTypes.func

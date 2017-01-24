@@ -1,28 +1,35 @@
 import C from '../constants'
 import { combineReducers } from 'redux'
 
-/*export const item = (state=null, action) => 
+export const item = (state=null, action) => 
   (action.type === C.ADD_ITEM) ?
   	action.payload :
-  	state*/
+  	state
 
 export const items = (state=[], action) => {
 
   switch(action.type) {
            
     case C.ADD_ITEM : 
-        return [
-        ...state,action.payload
-        ].sort((a, b) => new Date(b.itemName) - new Date(a.itemName))
-      /*const hasDay = state.some(item => item.itemName === action.payload.itemName)
+//        return [
+//        ...state,action.payload
+//        ].sort((a, b) => new Date(b.itemName) - new Date(a.itemName))
+        
+      const hasItem = state.some(item => item.itemName === action.payload.itemName)
 
-      return (hasDay) ?
-         state :
-         [
-           ...state,
-           item(null, action)
-         ].sort((a, b) => new Date(b.itemName) - new Date(a.itemName))*/
-
+        if (hasItem){ 
+             console.log('this is herer');
+             console.log(state.filter(item => item.itemName !== action.payload) );
+            return [
+            ...state.filter(item => item.itemName !== action.payload) 
+            ]
+        }else{
+            return [
+                ...state,
+                item(null, action)
+                ]
+        }
+            
     case C.REMOVE_ITEM :
 
       return state.filter(item => item.itemName !== action.payload)     
@@ -48,7 +55,7 @@ export const selectedItems = (state=[], action) => {
 }
 
 export default combineReducers({
-  items
+  items,selectedItems
 })
 
 

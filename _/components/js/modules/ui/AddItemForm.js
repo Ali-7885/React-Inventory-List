@@ -1,16 +1,21 @@
 import { PropTypes } from 'react'
+import { addItem } from '../../actions'
 
-export const AddItemForm = ({ onNewItem=f=>f, router}) => {
+export const AddItemForm = ({ onAddItem=f=>f, router}) => {
 
     let _itemName
 
     const submit = e => {
         e.preventDefault()
-        onNewItem({
+        onAddItem({
             itemName: _itemName.value,
             itemCount: 1
         })
-
+//         store.disptach(
+//                 addItem(onAddItem)
+//         )
+        onAddItem(onAddItem.itemName)
+        console.log(onAddItem.itemName)
        router.push('/')
         _itemName.value = ''
     }
@@ -24,6 +29,8 @@ export const AddItemForm = ({ onNewItem=f=>f, router}) => {
     )
 }
 AddItemForm.propTypes = {
-    onNewItem: PropTypes.func,
+    onAddItem: PropTypes.func,
     router: PropTypes.object
 }
+
+export default AddItemForm
