@@ -1,55 +1,33 @@
-import { Component } from 'react'
-import fetch from 'isomorphic-fetch'
+import { PropTypes } from 'react'
 import RowList from './RowList'
 import AddBtn from 'react-icons/lib/fa/plus-circle'
 import RemoveBtn from 'react-icons/lib/fa/minus-circle'
 
-class InventoryList extends Component {
+const InventoryList =({items,onSelectItem=f=>f,onAddItem=f=>f,onRemoveItem=f=>f,})=>{
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            items: [
-            {
-                itemName: "PC",
-                itemCount: 2
-            },
-            {
-                itemName: "MAC",
-                itemCount: 4
-            }
-          ]
-        }
-    }
+      console.log(items);
 
-    render() {
-    	const { items } = this.state
-        return (
-            <div>
-                <h1>Inventory List</h1>
-                <div>
-                
-                    <a onClick={()=>console.log("addItems")}><AddBtn /></a>
-                    <a onClick={()=>console.log("removeItems")}><RemoveBtn /></a>
-                </div>
-                <table>
-                     <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Amount</th>
-                            <th></th>
-                         </tr>
-                    </thead>
-                    <tbody>
-                    {items.map(
-                	    (data, i) => 
-                		    <RowList key={i} {...data} />
-                	 )}
-                     </tbody>
-                </table>
+    return (
+        <div>   
+            <div>    
+                <a onClick={()=>onAddItem }><AddBtn /></a>
+                <a onClick={()=>onRemoveItem}><RemoveBtn /></a>
             </div>
-        )
-    }
+            <table>
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Amount</th>
+                        <th></th>
+                        </tr>
+                </thead>
+                <tbody>
+                {items}
+                </tbody>
+            </table>
+        </div>
+    )
 }
+
 
 export default InventoryList

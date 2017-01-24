@@ -22,27 +22,46 @@
  * THE SOFTWARE.
  */
 
-console.log('The application has been start...');
+// the root component that renders everything else.
 
+console.log('The application has been started ...');
+
+import C from './constants'
 import React from 'react'
 import { render } from 'react-dom'
-import { IndexPage } from './modules/IndexPage'
-import { AddItemForm } from './modules/ui/AddItemForm'
-import { SkiDayCount } from './modules/ui/AddItemForm'
-
-
-import { PageNotFound } from './modules/PageNotFound'
-import { Router, Route, hashHistory } from 'react-router'
 import routes from './routes'
+import sampleData from './initialState'
+import storeFactory from './store'
+import { Provider } from 'react-redux'
+
+const initialState = (localStorage["redux-store"]) ?
+    JSON.parse(localStorage["redux-store"]) :
+    sampleData
+
+const saveState = () => 
+    localStorage["redux-store"] = JSON.stringify(store.getState())
+
+const store = storeFactory(initialState)
+store.subscribe(saveState)
+
+console.log(store.getState())
+
+/*store.dispatch({
+    type:C.ADD_ITEM,
+    payload:{
+        itemName:'Ali',
+        itemCount:'30'
+    }
+})
+
+console.log(store.getState())*/
 
 window.React = React
+window.store = store // TODO: THIS NEED TO BE REMOVE FOR PRODUCTION 
 
 render(
-   <Router history={hashHistory}>
-        <Route path='/' component={IndexPage}/>
-        <Route path='/add' component={AddItemForm}/>
-         <Route path='/remove' component={SkiDayCount}/>
-        <Route path='*' component={PageNotFound}/>
-    </Router>,
-    document.getElementById('react-container')
+	<Provider store={store}>
+	   {routes}
+	</Provider>,
+  document.getElementById('react-container')
 )
