@@ -33,6 +33,19 @@ export const items = (state=[], action) => {
 
 }
 
+export const selectedItems = (state=[], action) => {
+  switch(action.type) {
+    case C.ADD_TO_SELECT_ITEM :
+    	return [
+         ...state,
+         action.payload
+    	]
+    case C.REMOVE_FROM_SELECT_ITEM : 
+      return state.filter(itemName => itemName !== action.payload)
+  	default: 
+  		return state
+  }
+}
 
 export default combineReducers({
   items

@@ -12,7 +12,7 @@ const RowList = ({ itemName, itemCount, onSelectItem=f=>f }) =>
 
 RowList.propTypes = {
     itemName: PropTypes.string.isRequired,
-    itemCount: PropTypes.number.isRequired,
+    itemCount: PropTypes.string.isRequired,
     onSelectItem: PropTypes.func
 }
 
