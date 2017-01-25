@@ -1,26 +1,29 @@
+var path = require('path');
 var webpack = require("webpack");
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = {
     entry: './public_html/_/components/js/app.js',
     output: {
+      // path: path.join(__dirname, 'dist'),
         path: './public_html/_/js',
         filename: 'bundle.js',
-        publicPath: 'public_html'
+        publicPath: '_/js/'
     },
     devtool: 'source-map',
+    // devtool: 'cheap-module-eval-source-map',
     devServer: {
         inline: true,
-        contentBase: "./public_html",
+        contentBase: "./public_html/",
         port: 3000
     },
     module: {
         loaders: [
-            { 
-                test: /\.vue$/, 
+            {
+                test: /\.vue$/,
                 loader: 'vue'
             },
-            {   
+            {
                 test: /\.js$/,
                 exclude: /(node_modules)/,
                 loader: ["babel-loader"],
