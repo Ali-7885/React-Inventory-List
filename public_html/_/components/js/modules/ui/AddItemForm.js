@@ -1,5 +1,6 @@
 import { PropTypes } from 'react'
 import { addItem } from '../../actions'
+import C from './../../constants'
 
 export const AddItemForm = ({ onAddItem=f=>f, router}) => {
 
@@ -11,11 +12,23 @@ export const AddItemForm = ({ onAddItem=f=>f, router}) => {
             itemName: _itemName.value,
             itemCount: 1
         })
-//         store.disptach(
-//                 addItem(onAddItem)
-//         )
+
+        store.dispatch(
+                addItem(_itemName.value,1)
+      )
+    // store.dispatch({
+    //     type:C.ADD_ITEM,
+    //     payload:{
+    //         itemName:'Ali',
+    //         itemCount:'30'
+    //     }
+    // })
+    addItem(_itemName.value,1);
+
+
+     console.log(store.getState())
         onAddItem(_itemName.value)
-        console.log(typeof(onAddItem))
+
         console.log(_itemName.value)
         _itemName.value = ''
         router.push('/')
@@ -24,7 +37,7 @@ export const AddItemForm = ({ onAddItem=f=>f, router}) => {
     return (
         <form onSubmit={submit} >
             <label htmlFor="item-name"> Name Item</label>
-            <input id="item-name" type="text" ref={(input) => _itemName = input } />     
+            <input id="item-name" type="text" ref={(input) => _itemName = input } />
             <button>Add Item</button>
         </form>
     )

@@ -1,6 +1,6 @@
-/* 
+/*
  * The MIT License
- * 
+ *
  * Copyright 2017 MAVAJ SUN CO.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,7 +38,7 @@ const initialState = (localStorage["redux-store"]) ?
     JSON.parse(localStorage["redux-store"]) :
     sampleData
 
-const saveState = () => 
+const saveState = () =>
     localStorage["redux-store"] = JSON.stringify(store.getState())
 
 const store = storeFactory(initialState)
@@ -57,7 +57,7 @@ console.log(store.getState())
 console.log(store.getState())*/
 
 window.React = React
-window.store = store // TODO: THIS NEED TO BE REMOVE FOR PRODUCTION 
+window.store = store // TODO: THIS NEED TO BE REMOVE FOR PRODUCTION
 
 render(
 	<Provider store={store}>
