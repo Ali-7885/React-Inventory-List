@@ -33,6 +33,7 @@ import routes from './routes'
 import sampleData from './initialState'
 import storeFactory from './store'
 import { Provider } from 'react-redux'
+import '../sass/style.scss'
 
 const initialState = (localStorage["redux-store"]) ?
     JSON.parse(localStorage["redux-store"]) :
@@ -41,23 +42,12 @@ const initialState = (localStorage["redux-store"]) ?
 const saveState = () =>
     localStorage["redux-store"] = JSON.stringify(store.getState())
 
+initialState.selectedItems=[]
 const store = storeFactory(initialState)
 store.subscribe(saveState)
 
-console.log(store.getState())
-
-/*store.dispatch({
-    type:C.ADD_ITEM,
-    payload:{
-        itemName:'Ali',
-        itemCount:'30'
-    }
-})
-
-console.log(store.getState())*/
-
 window.React = React
-window.store = store // TODO: THIS NEED TO BE REMOVE FOR PRODUCTION
+window.store = store // TODO: THIS NEED TO BE REMOVE FOR PRODUCTION and find solution for it
 
 render(
 	<Provider store={store}>

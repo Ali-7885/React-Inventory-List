@@ -1,0 +1,55 @@
+$color-primary:              #004275 !default;
+$color-blueviolet:           #9877ea !default;
+$color-orange:               #EF4123 !default;
+$color-red:                  #c54041 !default;
+$color-gold:                 #b99769 !default;
+$color-dark:                 #222324 !default;
+$color-dark-light:           #242526 !default;
+$color-heading:              #242424 !default;
+$color-white:                #ffffff !default;
+$color-text:                 #656565 !default;
+$color-gray-light:           #cecece !default;
+$color-gray-lighter:         #aeaeae !default;
+$color-sky-light:            #f5f8f9 !default;
+
+// Body
+$bg-color-body:             $color-white !default;
+$color-body:                $color-dark !default;
+
+
+$font-family-primary:			 'Rubik', Lato, sans-serif !default; // Default Font Lato font family
+$font-family-secondary:			Montserrat, sans-serif !default; // Secondary Font Montserrat font family
+
+$line-height:                1.6 !default;
+
+$headings-margin-bottom:     .75rem !default;
+$headings-font-weight:       400 !default;
+$headings-line-height:       1.2 !default;
+
+// Container
+$container-sm:              750px !default;
+$container-md:              970px !default;
+
+
+// Grid breakpoints
+$grid-breakpoints: (
+// Extra small screen / phone
+xs: 0,
+// Small screen / phone
+sm: 34em,
+// Medium screen / tablet
+md: 48em,
+// Large screen / desktop
+lg: 62em,
+// Extra large screen / wide desktop
+xl: 75em
+) !default;
+
+
+// Grid containers
+$container-max-widths: (
+sm: 34rem,    // 480
+md: 45rem,    // 720
+lg: 60rem,    // 960
+xl: 72.25rem  // 1140
+) !default;

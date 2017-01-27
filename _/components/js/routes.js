@@ -8,9 +8,9 @@ const routes=(
    <Router history={hashHistory}>
         <Route path='/' component={IndexPage}>
             <Route path='/add' component={AddItemForm}/>
-            <Route path='*' component={PageNotFound}/>
         </Route>
+        <Route path='*' component={PageNotFound}/>
     </Router>
 )
 
-export default routes 
+export default routes
