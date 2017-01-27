@@ -1,0 +1,58 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+html,
+body,
+div#react-container,
+div.app {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: $font-family-primary;
+  background-color: $bg-color-body;
+  color:$color-body;
+}
+
+.InventoryListTitle{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom:20px;
+  border-bottom: 1px solid $color-gray-light;
+}
+
+.InventoryListBody{
+  margin-bottom: 20px;
+}
+
+.InventoryListForm{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.InventoryListAction{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  .btn{
+    height: 45px;
+    margin: 2px;
+    font-size: 20px;
+  }
+}
+
+.InventoryListTable{
+  margin-top: 20px;
+}
+
+.InventoryListTable{}

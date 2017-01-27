@@ -7,39 +7,26 @@ export const AddItemForm = ({ onAddItem=f=>f, router}) => {
     let _itemName
 
     const submit = e => {
-        e.preventDefault()
-        onAddItem({
-            itemName: _itemName.value,
-            itemCount: 1
-        })
-
+      e.preventDefault()
+      if(_itemName.value!=""){
         store.dispatch(
-                addItem(_itemName.value,1)
-      )
-    // store.dispatch({
-    //     type:C.ADD_ITEM,
-    //     payload:{
-    //         itemName:'Ali',
-    //         itemCount:'30'
-    //     }
-    // })
-    addItem(_itemName.value,1);
-
-
-     console.log(store.getState())
-        onAddItem(_itemName.value)
-
-        console.log(_itemName.value)
+          addItem(_itemName.value.trim(),1)
+        )
         _itemName.value = ''
         router.push('/')
+      }
     }
 
     return (
+      <div className="InventoryListForm">
         <form onSubmit={submit} >
-            <label htmlFor="item-name"> Name Item</label>
-            <input id="item-name" type="text" ref={(input) => _itemName = input } />
-            <button>Add Item</button>
+          <div className="form-group">
+            <label htmlFor="item-name">Name Item</label>
+            <input className="form-control" id="item-name" type="text" ref={(input) => _itemName = input } />
+          </div>
+          <button className="btn btn-default" >Add Item</button>
         </form>
+      </div>
     )
 }
 AddItemForm.propTypes = {
