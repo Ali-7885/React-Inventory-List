@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "prestart": "node_modules/.bin/webpack",
+    "test": "jest",
     "start": "node_modules/.bin/webpack-dev-server"
   },
   "repository": {
@@ -42,6 +43,7 @@
     "babel-preset-react": "^6.22.0",
     "babel-preset-stage-0": "^6.22.0",
     "css-loader": "^0.26.1",
+    "jest-cli": "^18.1.0",
     "json-loader": "^0.5.4",
     "live-reload": "^1.1.0",
     "node-sass": "^4.3.0",
@@ -51,5 +53,9 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
+  },
+  "jest":{
+    "scriptPreprocessor":"./node_modules/babel-jest",
+    "testDirectoyName":"test"
   }
 }
