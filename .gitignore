@@ -1,3 +1,18 @@
 /node_modules/
 /public_html/_/css/
 /public_html/_/js/
+
+
+# dependencies
+node_modules
+
+# testing
+coverage
+
+# production
+build
+
+# misc
+.DS_Store
+.env
+npm-debug.log
