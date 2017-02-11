@@ -9,6 +9,7 @@
     "list"
   ],
   "scripts": {
+    "postinstall": "node_modules/.bin/webpack",
     "prestart": "node_modules/.bin/webpack",
     "test": "jest",
     "start": "node_modules/.bin/webpack-dev-server"
