@@ -12,8 +12,7 @@
     
     "prestart": "node_modules/.bin/webpack",
     "test": "jest",
-    "start": "node_modules/.bin/webpack-dev-server",
-    "postinstall": "webpack"
+    "start": "node_modules/.bin/webpack-dev-server"
   },
   "repository": {
     "type": "git",
