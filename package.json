@@ -16,13 +16,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mavaj/Inventory-List.git"
+    "url": "https://github.com//Inventory-List.git"
   },
   "bugs": {
-    "url": "https://github.com/mavaj/Inventory-List.git/issues"
+    "url": "https://github.com/AJ-7885/React-Inventory-List/issues"
   },
-  "homepage": "https://github.com/mavaj/Inventory-List",
-  "author": "AJ at MAVAJ SUN CO (aj@mavajsunco.com )",
+  "homepage": "https://github.com/AJ-7885/React-Inventory-List",
+  "author": "https://github.com/AJ-7885",
   "license": "MIT",
   "contributors": [],
   "dependencies": {
