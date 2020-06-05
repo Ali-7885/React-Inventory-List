@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2017 MAVAJ SUN CO.
+ * Copyright 2017-2020 WebChannel.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
