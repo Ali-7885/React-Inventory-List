@@ -9,7 +9,7 @@
     "list"
   ],
   "scripts": {
-    "postinstall":"webpack -p",
+    "postinstall": "webpack -p",
     "prestart": "node_modules/.bin/webpack",
     "test": "jest",
     "dev": "node_modules/.bin/webpack-dev-server"
@@ -55,8 +55,8 @@
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   },
-  "jest":{
-    "scriptPreprocessor":"./node_modules/babel-jest",
-    "testDirectoyName":"test"
+  "jest": {
+    "scriptPreprocessor": "./node_modules/babel-jest",
+    "testDirectoyName": "test"
   }
 }

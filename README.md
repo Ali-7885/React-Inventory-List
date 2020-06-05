@@ -47,7 +47,7 @@ redux-thunk
 
 After you clone the project or download zip file. on root of folder 
 
-1.npm install 
-2.npm start 
+1.yarn install 
+2.yarn dev
 3.browse on http://127.0.0.1:3000
 
